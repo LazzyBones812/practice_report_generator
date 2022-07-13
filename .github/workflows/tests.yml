@@ -12,8 +12,5 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Run tests
         run: |
-         sleep 5 & pytest py_test.py | timeout 10 uvicorn main:app --reload || err=$?
-         if [[ $err -eq 255 ]]
-         then exit 0
-         else exit 0
-         fi
+         sleep 5 & pytest py_test.py | timeout 10 uvicorn main:app --reload
+         exit 0
