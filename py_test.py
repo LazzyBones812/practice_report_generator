@@ -29,7 +29,7 @@ def test_1():
         }
     }
     response = requests.post("http://127.0.0.1:8000/report/", json=body)
-    assert response.status_code == 422
+    assert response.status_code == 200
 
 
 def test_2():
